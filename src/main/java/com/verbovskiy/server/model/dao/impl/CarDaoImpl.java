@@ -7,6 +7,9 @@ import com.verbovskiy.server.model.dao.ColumnName;
 import com.verbovskiy.server.model.dao.query.DatabaseQuery;
 import com.verbovskiy.server.model.entity.*;
 import com.verbovskiy.server.util.date_converter.DateConverter;
+import org.apache.log4j.Level;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,6 +27,7 @@ import java.util.Optional;
  * @version 1.0
  */
 public class CarDaoImpl implements CarDao {
+    private final Logger logger = LogManager.getLogger(CarDaoImpl.class);
     private static CarDao instance;
 
     private CarDaoImpl() {
@@ -46,23 +50,40 @@ public class CarDaoImpl implements CarDao {
                     boolean isAvailable, long addedDate, String model, String manufactureYear,
                     String color, String boxType, String engineType) throws DaoException {
         ConnectionPool connectionPool = ConnectionPool.getInstance();
+        Connection connection = connectionPool.getConnection();
 
-        try (Connection connection = connectionPool.getConnection();
-                PreparedStatement carStatement = connection.prepareStatement(DatabaseQuery.ADD_CAR)) {
-            carStatement.setString(1, brand);
-            carStatement.setDouble(2, Double.parseDouble(price));
-            carStatement.setString(3, description);
-            carStatement.setString(4, imageName);
-            carStatement.setBoolean(5, isAvailable);
-            carStatement.setLong(6, addedDate);
-            carStatement.setString(7, model);
-            carStatement.setString(8, manufactureYear);
-            carStatement.setString( 9, color);
-            carStatement.setString(10, engineType);
-            carStatement.setString(11, boxType);
-            carStatement.executeUpdate();
+        try {
+            connection.setAutoCommit(false);
+            try (PreparedStatement carStatement = connection.prepareStatement(DatabaseQuery.ADD_CAR);
+                 PreparedStatement imageStatement = connection.prepareStatement(DatabaseQuery.ADD_IMAGE_NAME)) {
+                imageStatement.setString(1, imageName);
+                imageStatement.executeUpdate();
+                carStatement.setString(1, imageName);
+                carStatement.setString(2, brand);
+                carStatement.setDouble(3, Double.parseDouble(price));
+                carStatement.setString(4, description);
+                carStatement.setBoolean(5, isAvailable);
+                carStatement.setLong(6, addedDate);
+                carStatement.setString(7, model);
+                carStatement.setString(8, manufactureYear);
+                carStatement.setString( 9, color);
+                carStatement.setString(10, engineType);
+                carStatement.setString(11, boxType);
+                carStatement.executeUpdate();
+                connection.commit();
+            } catch (SQLException e) {
+                connection.rollback();
+                throw new SQLException(e);
+            }
         } catch (SQLException e) {
             throw new DaoException("Error while adding car to database", e);
+        } finally {
+            try {
+                connection.setAutoCommit(true);
+            } catch (SQLException e) {
+                logger.log(Level.ERROR, "connection error", e);
+            }
+            connectionPool.releaseConnection(connection);
         }
     }
 
@@ -223,7 +244,7 @@ public class CarDaoImpl implements CarDao {
 
     private Car createCarFromSql(ResultSet resultSet) throws SQLException {
         long carId = Long.parseLong(resultSet.getString(ColumnName.CAR_ID));
-        CarBrand brand = CarBrand.valueOf(resultSet.getString(ColumnName.BRAND));
+        CarBrand brand = CarBrand.valueOf(resultSet.getString(ColumnName.BRAND).toUpperCase());
         double price = Double.parseDouble(resultSet.getString(ColumnName.PRICE));
         String description = resultSet.getString(ColumnName.DESCRIPTION);
         String imageName = resultSet.getString(ColumnName.IMAGE_NAME);
@@ -231,9 +252,9 @@ public class CarDaoImpl implements CarDao {
         LocalDate addedDate = DateConverter.convertToDate(resultSet.getLong(ColumnName.ADDED_DATE));
         String model = resultSet.getString(ColumnName.MODEL);
         int manufactureYear = Integer.parseInt(resultSet.getString(ColumnName.MANUFACTURE_YEAR));
-        CarColor color = CarColor.valueOf(resultSet.getString(ColumnName.COLOR));
-        BoxType boxType = BoxType.valueOf(resultSet.getString(ColumnName.BOX_TYPE));
-        CarEngine engineType = CarEngine.valueOf(resultSet.getString(ColumnName.ENGINE_TYPE));
+        CarColor color = CarColor.valueOf(resultSet.getString(ColumnName.COLOR).toUpperCase());
+        BoxType boxType = BoxType.valueOf(resultSet.getString(ColumnName.BOX_TYPE).toUpperCase());
+        CarEngine engineType = CarEngine.valueOf(resultSet.getString(ColumnName.ENGINE_TYPE).toUpperCase());
 
         return new Car(carId, brand, model, manufactureYear, price, description, imageName, addedDate, isAvailable,
                 color, boxType, engineType);

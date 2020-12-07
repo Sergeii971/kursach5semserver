@@ -15,7 +15,9 @@ public enum CommandType {
     CHANGE_USER_BLOCK_STATUS(new ChangeUserBlockStatusCommand()),
     SEARCH_USERS(new SearchUsersCommand()),
     FILTER_USERS(new FilterUsersCommand()),
-    SORT_USERS(new SortUsersCommand());
+    SORT_USERS(new SortUsersCommand()),
+    CHANGE_PASSWORD(new ChangePasswordCommand()),
+    ADD_CAR(new AddCarCommand());
 
     private final ActionCommand command;
 

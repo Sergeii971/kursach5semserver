@@ -31,7 +31,9 @@ public class DatabaseQuery {
     public static final String FIND_USER_BY_EMAIL = FIND_ALL_USERS + " WHERE email = ?";
     public static final String SEARCH_USER = FIND_ALL_USERS + " WHERE CONCAT(email, name, surname) LIKE concat('%' , ?, '%')";
 
-    public static final String ADD_CAR = "INSERT INTO car(brand, price, description, imageName," +
+    public static final String ADD_IMAGE_NAME = "INSERT INTO image(imageName) VALUES (?)";
+
+    public static final String ADD_CAR = "INSERT INTO car(image_imageName, brand, price, description, " +
             " isAvailable, addedDate, model, manufactureYear, color, engineType, boxType) " + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     public static final String FIND_ALL_CARS = "SELECT carId, brand, price, description, imageName, " +
             " isAvailable, addedDate, model, manufactureYear,  color, engineType, boxType" + " FROM car";

@@ -26,7 +26,7 @@ public final class RequestParameter {
     public static final String SEARCH_PARAMETER = "searchParameter";
     public static final String SORT_TYPE = "sortType";
     public static final String IS_IMAGE_LOADED = "isImageLoaded";
-    public static final String IMAGE_NAME = "imageName";
+    public static final String IMAGE = "image";
     public static final String IS_IMAGE_SELECTED = "isImageSelected";
     public static final String BRAND = "brand";
     public static final String MODEL = "model";
@@ -52,4 +52,5 @@ public final class RequestParameter {
     public static final String SIZE = "size";
     public static final String USER_ID = "id";
     public static final String DEFAULT = "Default";
+    public static final String NEW_PASSWORD = "newPassword";
 }
