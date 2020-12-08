@@ -6,7 +6,7 @@ package com.verbovskiy.server.model.entity;
  * @author Verbovskiy Sergei
  * @version 1.0
  */
-public enum CarBrand {
+public enum CarBrand implements Entity {
     AUDI("Audi"),
     BMW("BMW"),
     BUGATTI("Bugatti"),

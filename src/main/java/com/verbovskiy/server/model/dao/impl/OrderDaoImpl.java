@@ -169,7 +169,7 @@ public class OrderDaoImpl implements OrderDao {
         LocalDate orderDate = DateConverter.convertToDate(resultSet.getLong(ColumnName.ORDER_DATE));
         boolean inProcessing = resultSet.getBoolean(ColumnName.IN_PROCESSING);
         long carId = Long.parseLong(resultSet.getString(ColumnName.CAR_ID));
-        CarBrand brand = CarBrand.valueOf(resultSet.getString(ColumnName.BRAND));
+        CarBrand brand = CarBrand.valueOf(resultSet.getString(ColumnName.BRAND).toUpperCase());
         double price = Double.parseDouble(resultSet.getString(ColumnName.PRICE));
         String description = resultSet.getString(ColumnName.DESCRIPTION);
         String imageName = resultSet.getString(ColumnName.IMAGE_NAME);
@@ -177,9 +177,9 @@ public class OrderDaoImpl implements OrderDao {
         LocalDate addedDate = DateConverter.convertToDate(resultSet.getLong(ColumnName.ADDED_DATE));
         String model = resultSet.getString(ColumnName.MODEL);
         int manufactureYear = Integer.parseInt(resultSet.getString(ColumnName.MANUFACTURE_YEAR));
-        CarColor color = CarColor.valueOf(resultSet.getString(ColumnName.COLOR));
-        BoxType boxType = BoxType.valueOf(resultSet.getString(ColumnName.BOX_TYPE));
-        CarEngine engineType = CarEngine.valueOf(resultSet.getString(ColumnName.ENGINE_TYPE));
+        CarColor color = CarColor.valueOf(resultSet.getString(ColumnName.COLOR).toUpperCase());
+        BoxType boxType = BoxType.valueOf(resultSet.getString(ColumnName.BOX_TYPE).toUpperCase());
+        CarEngine engineType = CarEngine.valueOf(resultSet.getString(ColumnName.ENGINE_TYPE).toUpperCase());
         Car car = new Car(carId, brand, model, manufactureYear, price, description, imageName, addedDate, isAvailable,
                 color, boxType, engineType);
         String login = resultSet.getString(ColumnName.LOGIN);

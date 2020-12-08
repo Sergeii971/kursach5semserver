@@ -360,3 +360,144 @@
 07.12.2020 20:10:30 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
 
 07.12.2020 20:27:50 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+08.12.2020 20:47:13 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 20:47:44 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 20:47:44 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 20:48:04 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+08.12.2020 22:00:50 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:01:21 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 22:01:21 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:02:51 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+08.12.2020 22:03:21 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 2
+08.12.2020 22:03:21 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:03:27 [pool-1-thread-1] ERROR com.verbovskiy.server.util.byte_converter.ByteConverter - error while converting to bytes
+08.12.2020 22:05:13 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:05:29 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 22:05:29 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:07:45 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+08.12.2020 22:08:41 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 2
+08.12.2020 22:08:41 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:10:15 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:11:16 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 22:11:16 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:20:36 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:20:41 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:21:25 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 22:21:25 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:22:54 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:23:16 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 22:23:16 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:25:56 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:27:31 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:27:45 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 22:27:45 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:29:29 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:29:47 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 22:29:47 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:30:17 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+08.12.2020 22:31:51 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 2
+08.12.2020 22:31:51 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:33:27 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:35:26 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 22:35:26 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:37:04 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 22:37:37 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 22:37:37 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:38:33 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+08.12.2020 22:40:37 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 2
+08.12.2020 22:40:37 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:41:30 [pool-1-thread-2] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+08.12.2020 22:57:04 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 3
+08.12.2020 22:57:04 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 22:57:15 [pool-1-thread-3] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+08.12.2020 23:19:37 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:20:03 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:20:03 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:20:13 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: Error while finding order by carId from database
+08.12.2020 23:22:45 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:23:03 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:23:03 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:23:10 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: Error while finding order by carId from database
+08.12.2020 23:24:29 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:24:52 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:24:52 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:25:13 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:25:33 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:25:33 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:28:53 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: Error while finding order by carId from database
+08.12.2020 23:29:02 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:29:06 [main] ERROR com.verbovskiy.server.controller.Controller - error while working server
+08.12.2020 23:29:19 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:29:41 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:29:41 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:29:56 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: Error while finding order by carId from database
+08.12.2020 23:32:07 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: Error while finding order by carId from database
+08.12.2020 23:32:14 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:32:41 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:32:41 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:33:41 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: Error while finding order by carId from database
+08.12.2020 23:33:50 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:34:09 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:34:09 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:35:55 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: Error while finding order by carId from database
+08.12.2020 23:36:07 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:36:22 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:36:22 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:39:24 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:39:41 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:39:41 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:39:50 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: error while remove car
+08.12.2020 23:42:14 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:42:45 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:42:45 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:55:27 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: error while remove car
+08.12.2020 23:55:46 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:56:02 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:56:02 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:56:10 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: error while remove car
+08.12.2020 23:58:26 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+08.12.2020 23:58:46 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+08.12.2020 23:58:46 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+08.12.2020 23:58:53 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: error while remove car
+08.12.2020 23:59:34 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+09.12.2020 00:00:04 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+09.12.2020 00:00:04 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 00:00:11 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: error while remove car
+09.12.2020 00:02:02 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+09.12.2020 00:02:29 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+09.12.2020 00:02:29 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 00:07:11 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.command.impl.DeleteCarCommand - com.verbovskiy.server.exception.ServiceException: error while remove car
+09.12.2020 00:07:22 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+09.12.2020 00:07:42 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+09.12.2020 00:07:42 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 00:09:18 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream

@@ -6,7 +6,7 @@ package com.verbovskiy.server.model.entity;
  * @author Verbovskiy Sergei
  * @version 1.0
  */
-public enum CarEngine {
+public enum CarEngine implements Entity {
     DIESEL("diesel"),
     PETROL("petrol");
 

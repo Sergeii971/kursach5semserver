@@ -25,9 +25,7 @@ import java.util.Optional;
  * @version 1.0
  */
 public class CarServiceImpl implements CarService {
-    private static final String DEFAULT_IMAGE_NAME = "unknown.png";
-    private static final String FOLDER_PATH = "C:\\Users\\sergei\\IdeaProjects\\epam.finalProject\\" +
-            "target\\epam_finalProject-1.0-SNAPSHOT\\uploads\\";
+    private static final String DEFAULT_IMAGE_NAME = "C:\\Users\\sergei\\IdeaProjects\\kursach3course\\target\\image\\unknown.png";
     private final CarDao carDao = CarDaoImpl.getInstance();
 
     @Override
@@ -57,11 +55,10 @@ public class CarServiceImpl implements CarService {
             if (!imageName.isPresent()) {
                 throw new ServiceException("error while find imageName");
             }
-            String filePath = new StringBuilder().append(FOLDER_PATH).append(imageName.get()).toString();
-            if (Files.exists(Paths.get(filePath)) && !imageName.get().equals(DEFAULT_IMAGE_NAME)) {
-                Files.delete(Paths.get(filePath));
+            if (Files.exists(Paths.get(imageName.get())) && !imageName.get().equals(DEFAULT_IMAGE_NAME)) {
+                Files.delete(Paths.get(imageName.get()));
             }
-            carDao.remove(carId);
+            carDao.remove(carId, imageName.get());
         } catch (DaoException | IOException e) {
             throw new ServiceException("error while remove car", e);
         }

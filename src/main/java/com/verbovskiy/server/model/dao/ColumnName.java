@@ -16,7 +16,6 @@ public class ColumnName {
     public static final String EMAIL = "email";
     public static final String NAME = "name";
     public static final String SURNAME = "surname";
-    public static final String IS_CONFIRMED = "isConfirmed";
     public static final String CAR_ID = "carId";
     public static final String BRAND = "brand";
     public static final String MODEL = "model";
@@ -29,7 +28,7 @@ public class ColumnName {
     public static final String COLOR = "color";
     public static final String ENGINE_TYPE = "engineType";
     public static final String BOX_TYPE = "boxType";
-    public static final String ORDER_DATE = "date";
+    public static final String ORDER_DATE = "orderDate";
     public static final String ORDER_ID = "orderId";
     public static final String IN_PROCESSING = "inProcessing";
 }

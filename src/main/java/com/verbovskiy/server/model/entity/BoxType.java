@@ -6,7 +6,7 @@ package com.verbovskiy.server.model.entity;
  * @author Verbovskiy Sergei
  * @version 1.0
  */
-public enum BoxType {
+public enum BoxType implements Entity {
     MECHANICS("mechanics"),
     AUTOMATION("automation");
 

@@ -6,7 +6,7 @@ package com.verbovskiy.server.model.entity;
  * @author Verbovskiy Sergei
  * @version 1.0
  */
-public enum CarColor {
+public enum CarColor implements Entity {
     BLACK("black"),
     RED("red"),
     WHITE("white"),

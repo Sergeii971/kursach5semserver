@@ -47,7 +47,7 @@ public interface CarDao {
      * @param carId the car id
      * @throws DaoException the dao exception
      */
-    void remove(long carId) throws DaoException;
+    void remove(long carId, String imageName) throws DaoException;
 
     /**
      * Change car status.

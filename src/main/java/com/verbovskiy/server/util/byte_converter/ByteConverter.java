@@ -13,8 +13,7 @@ public class ByteConverter {
 
     public static byte[] convertToBytes(File file) {
         byte[] bytes = new byte[(int) file.length()];
-        try {
-            FileInputStream inF = new FileInputStream(file);
+        try(FileInputStream inF = new FileInputStream(file)) {
             int byte1;
             for (int i = 0; (byte1 = inF.read()) > -1; i++) {
                 bytes[i] = (byte) byte1;

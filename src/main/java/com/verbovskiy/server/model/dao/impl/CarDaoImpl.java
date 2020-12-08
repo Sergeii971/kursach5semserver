@@ -106,15 +106,32 @@ public class CarDaoImpl implements CarDao {
     }
 
     @Override
-    public void remove(long carId) throws DaoException {
+    public void remove(long carId, String imageName) throws DaoException {
         ConnectionPool connectionPool = ConnectionPool.getInstance();
+        Connection connection = connectionPool.getConnection();
 
-        try (Connection connection = connectionPool.getConnection();
-                PreparedStatement accountStatement = connection.prepareStatement(DatabaseQuery.REMOVE_CAR)) {
-            accountStatement.setLong(1, carId);
-            accountStatement.executeUpdate();
+        try {
+            connection.setAutoCommit(false);
+            try (PreparedStatement imageStatement = connection.prepareStatement(DatabaseQuery.REMOVE_IMAGE);
+                 PreparedStatement carStatement = connection.prepareStatement(DatabaseQuery.REMOVE_CAR)) {
+                carStatement.setLong(1, carId);
+                carStatement.executeUpdate();
+                imageStatement.setString(1, imageName);
+                imageStatement.executeUpdate();
+                connection.commit();
+            } catch (SQLException e) {
+                connection.rollback();
+                throw new SQLException(e);
+            }
         } catch (SQLException e) {
             throw new DaoException("Error while removing car from database", e);
+        } finally {
+            try {
+                connection.setAutoCommit(true);
+            } catch (SQLException e) {
+                logger.log(Level.ERROR, "connection error", e);
+            }
+            connectionPool.releaseConnection(connection);
         }
     }
 

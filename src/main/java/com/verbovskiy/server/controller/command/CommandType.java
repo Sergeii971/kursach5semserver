@@ -17,7 +17,11 @@ public enum CommandType {
     FILTER_USERS(new FilterUsersCommand()),
     SORT_USERS(new SortUsersCommand()),
     CHANGE_PASSWORD(new ChangePasswordCommand()),
-    ADD_CAR(new AddCarCommand());
+    ADD_CAR(new AddCarCommand()),
+    SHOW_CARS(new ShowCarsCommand()),
+    CHANGE_CAR_AVAILABLE_STATUS(new ChangeCarAvailableStatusCommand()),
+    DELETE_CAR(new DeleteCarCommand()),
+    FIND_CARS(new FindCarsCommand());
 
     private final ActionCommand command;
 
