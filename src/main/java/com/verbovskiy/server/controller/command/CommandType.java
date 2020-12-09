@@ -21,7 +21,12 @@ public enum CommandType {
     SHOW_CARS(new ShowCarsCommand()),
     CHANGE_CAR_AVAILABLE_STATUS(new ChangeCarAvailableStatusCommand()),
     DELETE_CAR(new DeleteCarCommand()),
-    FIND_CARS(new FindCarsCommand());
+    FIND_CARS(new FindCarsCommand()),
+    BUY_CAR(new BuyCarCommand()),
+    SHOW_ORDERS(new ShowOrdersCommand()),
+    DELETE_ORDER(new DeleteOrderCommand()),
+    FIND_ORDERS(new FindOrdersCommand()),
+    CHANGE_ORDER_STATUS(new ChangeOrderStatusCommand());
 
     private final ActionCommand command;
 

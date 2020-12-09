@@ -64,7 +64,7 @@ public class DatabaseQuery {
     public static final String FIND_ORDERS_BY_SEARCH_PARAMETERS = FIND_ALL_ORDERS + " WHERE brand LIKE concat(?, '%')" +
             " AND color LIKE concat(?, '%') AND engineType LIKE concat(?, '%') AND boxType LIKE concat(?, '%')" +
             " AND CONCAT(brand, price, description, model, manufactureYear, color, engineType, boxType,  email, name," +
-            " surname) LIKE concat('%' , ?, '%') ORDER BY date DESC";
+            " surname) LIKE concat('%' , ?, '%') ORDER BY orderDate DESC";
     public static final String CHANGE_IS_PROCESSING_ORDER_STATUS = "UPDATE `order` SET inProcessing = ? WHERE orderId = ?";
     public static final String FIND_ORDER_BY_USER_EMAIL = FIND_ALL_ORDERS + " WHERE email = ? ORDER BY date DESC";
 }
