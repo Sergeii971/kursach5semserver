@@ -1,5 +1,6 @@
 package com.verbovskiy.server.model.dao.impl;
 
+import com.verbovskiy.server.controller.command.RequestParameter;
 import com.verbovskiy.server.exception.DaoException;
 import com.verbovskiy.server.model.connection.ConnectionPool;
 import com.verbovskiy.server.model.dao.ColumnName;
@@ -147,6 +148,24 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    public double calculateDateProfit(long date) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getInstance();
+
+        try (Connection connection = connectionPool.getConnection();
+             PreparedStatement statement = connection.prepareStatement(DatabaseQuery.CALCULATE_DATE_PROFIT)) {
+            statement.setLong(1, date);
+            ResultSet resultSet = statement.executeQuery();
+            double profit = 0;
+            if (resultSet.next()) {
+                profit = resultSet.getDouble(ColumnName.PROFIT);
+            }
+            return profit;
+        } catch (SQLException e) {
+            throw new DaoException("Error while finding order by carId from database", e);
+        }
+    }
+
+    @Override
     public Optional<UserOrder> findByCarId(long carId) throws DaoException {
         ConnectionPool connectionPool = ConnectionPool.getInstance();
 
@@ -170,7 +189,7 @@ public class OrderDaoImpl implements OrderDao {
         boolean inProcessing = resultSet.getBoolean(ColumnName.IN_PROCESSING);
         long carId = Long.parseLong(resultSet.getString(ColumnName.CAR_ID));
         CarBrand brand = CarBrand.valueOf(resultSet.getString(ColumnName.BRAND).toUpperCase());
-        double price = Double.parseDouble(resultSet.getString(ColumnName.PRICE));
+        double price = resultSet.getDouble(ColumnName.PRICE);
         String description = resultSet.getString(ColumnName.DESCRIPTION);
         String imageName = resultSet.getString(ColumnName.IMAGE_NAME);
         boolean isAvailable = resultSet.getBoolean(ColumnName.IS_AVAILABLE);

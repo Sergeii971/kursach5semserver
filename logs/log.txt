@@ -579,3 +579,38 @@
 09.12.2020 17:09:31 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 2
 09.12.2020 17:09:31 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
 
+09.12.2020 17:11:52 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+09.12.2020 17:12:15 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+09.12.2020 17:12:15 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 17:13:25 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+09.12.2020 18:24:25 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+09.12.2020 18:26:02 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+09.12.2020 18:26:02 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 18:27:39 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+09.12.2020 18:30:55 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 2
+09.12.2020 18:30:55 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 18:31:08 [pool-1-thread-2] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+09.12.2020 18:34:35 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 3
+09.12.2020 18:34:35 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 18:35:51 [pool-1-thread-3] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+09.12.2020 18:42:56 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 4
+09.12.2020 18:42:56 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 18:43:35 [pool-1-thread-4] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+09.12.2020 18:46:00 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 5
+09.12.2020 18:46:00 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 18:46:24 [pool-1-thread-5] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+09.12.2020 18:48:25 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 6
+09.12.2020 18:48:25 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 18:48:37 [pool-1-thread-6] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream
+09.12.2020 19:46:34 [main] INFO  com.verbovskiy.server.controller.Controller - Server socket created, port 1280, command console reader for listen to server commands
+09.12.2020 19:48:46 [main] INFO  com.verbovskiy.server.controller.MonoThreadClientHandler - подключений за все время работы сервера: 1
+09.12.2020 19:48:46 [main] INFO  com.verbovskiy.server.controller.Controller - Connection accepted.
+
+09.12.2020 20:05:48 [pool-1-thread-1] ERROR com.verbovskiy.server.controller.MonoThreadClientHandler - error while close stream

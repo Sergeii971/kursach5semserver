@@ -1,5 +1,6 @@
 package com.verbovskiy.server.model.service.impl;
 
+import com.verbovskiy.server.controller.command.RequestParameter;
 import com.verbovskiy.server.exception.DaoException;
 import com.verbovskiy.server.exception.ServiceException;
 import com.verbovskiy.server.model.dao.OrderDao;
@@ -10,7 +11,9 @@ import com.verbovskiy.server.util.date_converter.DateConverter;
 import com.verbovskiy.server.validator.SearchValidator;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -88,6 +91,27 @@ public class OrderServiceImpl implements OrderService {
     public List<UserOrder> findAllOrders() throws ServiceException {
         try {
             return dao.findAll();
+        } catch (DaoException e) {
+            throw new ServiceException(e.getMessage());
+        }
+    }
+
+    @Override
+    public Map<String, Double> calculateWeekProfit() throws ServiceException {
+        try {
+            Map<String, Double> profits= new HashMap<>();
+            final int dayInWeekWithoutSunday = 6;
+            double weekProfit = 0;
+            LocalDate date = LocalDate.now();
+            for (int i = 0; i < dayInWeekWithoutSunday; i++) {
+                long dateLongFormat = DateConverter.convertToLong(date);
+                double dayProfit = dao.calculateDateProfit(dateLongFormat);
+                weekProfit += dayProfit;
+                profits.put(RequestParameter.DAY_PROFIT + i, dayProfit);
+                date = date.minusDays(1);
+            }
+            profits.put(RequestParameter.COMMON_COMPANY_PROFIT, weekProfit);
+            return profits;
         } catch (DaoException e) {
             throw new ServiceException(e.getMessage());
         }

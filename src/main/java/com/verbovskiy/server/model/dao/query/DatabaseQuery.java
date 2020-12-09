@@ -67,4 +67,6 @@ public class DatabaseQuery {
             " surname) LIKE concat('%' , ?, '%') ORDER BY orderDate DESC";
     public static final String CHANGE_IS_PROCESSING_ORDER_STATUS = "UPDATE `order` SET inProcessing = ? WHERE orderId = ?";
     public static final String FIND_ORDER_BY_USER_EMAIL = FIND_ALL_ORDERS + " WHERE email = ? ORDER BY date DESC";
+    public static final String CALCULATE_DATE_PROFIT = "SELECT SUM(car.price) AS profit FROM `order` " +
+            "Inner Join car ON carId = car_carId WHERE orderDate = ? GROUP BY orderId";
 }

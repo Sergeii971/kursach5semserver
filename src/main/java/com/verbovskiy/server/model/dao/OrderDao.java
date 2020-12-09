@@ -72,6 +72,8 @@ public interface OrderDao {
      */
     List<UserOrder> findByUserEmail(String email) throws DaoException;
 
+    double calculateDateProfit(long date) throws DaoException;
+
     /**
      * Find order by car id.
      *

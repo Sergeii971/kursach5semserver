@@ -5,6 +5,7 @@ import com.verbovskiy.server.model.entity.UserOrder;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -81,4 +82,6 @@ public interface OrderService {
      * @throws ServiceException the service exception
      */
     List<UserOrder> findAllOrders() throws ServiceException;
+
+    Map<String, Double> calculateWeekProfit() throws ServiceException;
 }

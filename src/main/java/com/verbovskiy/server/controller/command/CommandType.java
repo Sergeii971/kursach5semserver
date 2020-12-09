@@ -26,7 +26,8 @@ public enum CommandType {
     SHOW_ORDERS(new ShowOrdersCommand()),
     DELETE_ORDER(new DeleteOrderCommand()),
     FIND_ORDERS(new FindOrdersCommand()),
-    CHANGE_ORDER_STATUS(new ChangeOrderStatusCommand());
+    CHANGE_ORDER_STATUS(new ChangeOrderStatusCommand()),
+    WEEK_PROFIT(new WeekProfitCommand());
 
     private final ActionCommand command;
 
