@@ -18,20 +18,6 @@ import java.util.concurrent.Executors;
 public class Controller {
 
     public static void main(String[] args) {
-//        UserService service = new UserServiceImpl();
-//        String login = "epam.online.store@gmail.com";
-//        String password = "571D3BEB574F2D1905196D55E8570D8C03B4CCC20BB65BC641328B06FD8840E7BD8E83354B5E1D1D0A78AE" +
-//                "AD9CECE7F1B9B716E5687C357F7A46C694CB5B4668";
-//        boolean isAdmin = true;
-//        boolean isBlocked = false;
-//        boolean isConfirmed = true;
-//        String name = "Sergei";
-//        String surname = "Verbovskiy";
-//        try {
-//            service.add(login, "S12345678s&", isAdmin, isBlocked,login,  name, surname);
-//        } catch (ServiceException e) {
-//            e.printStackTrace();
-//        }
         final Logger logger = LogManager.getLogger(Controller.class);
         ExecutorService executeIt = Executors.newCachedThreadPool();
         int i = 0;
